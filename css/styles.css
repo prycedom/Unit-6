@@ -16,12 +16,6 @@
   --transition: all .2s ease-in-out;
 }
 
-var keyboard = document.getElementById (qwerty);
-var newphrase = document.getElementById (Phrase);
-var reset = document.getElementByClass (.btn__reset);
-
-
-
 /* main */
 
 * {
