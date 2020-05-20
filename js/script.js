@@ -28,7 +28,7 @@ const checkWin = () => {
 }
 
 startButton.addEventListener('click', () => {
-
+  document.getElementById("overlay").style.display = "none";
 });
 
 qwerty.addEventListener('click', () => {
