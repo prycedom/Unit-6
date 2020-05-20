@@ -16,7 +16,7 @@ for (i = 0; i < 5; i++) {
 
 }
 
-startGame.addEventListener('click', () => {
+reset.addEventListener('click', () => {
   overlay.style.display = 'none;
 });
 
