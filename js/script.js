@@ -2,7 +2,7 @@
 
 const keyboard = document.getElementById (qwerty);
 const newphrase = document.getElementById (phrase);
-const reset = document.getElementsByClassName ('.btn_reset');
+const reset = document.getElementsByClassName ('.btn__reset');
 let phrases = ['I love coding',
                'I am learning to code',
                'I am learning javascript',
@@ -10,14 +10,14 @@ let phrases = ['I love coding',
                'Learning to code is fun']
 const missed = [0]
 const i = missed;
-i = missed[0];
+// i = missed[0];
 // Use later
-for (i = 0; i < 5; i++) {
+// for (i = 0; i < 5; i++) {
+//
+// }
 
-}
-
-reset.addEventListener('click', () => {
-  overlay.style.display = 'none;
+overlay.addEventListener('click',() => {
+  overlay.style.display = 'none';
 });
 
 // const getRandomPhraseAsArray = arr => {
