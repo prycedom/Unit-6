@@ -22,18 +22,19 @@ startOverlay.addEventListener('click',() => {
 });
 // Get random Phrase array:
 const getRandomPhraseAsArray = arr => {
-  math.random(0, arraylength + 1);
-  phrases.length;
+  return Math.floor(Math.random() * phrases.length + 1);
 }
 getRandomPhraseAsArray(phrases);
+
+// Checks to see if the letter is in this phrase:
+const checkLetter = button => {
+
+}
 //
 // const addPhraseToDisplay = arr => {
 //
 // }
 //
-// const checkLetter = button => {
-//
-// }
 //
 // const checkWin = () => {
 //
