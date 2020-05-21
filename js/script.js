@@ -3,6 +3,7 @@
 const keyboard = document.getElementById (qwerty);
 const newphrase = document.getElementById (phrase);
 const reset = document.getElementsByClassName ('.btn__reset');
+const startOverlay = document.getElementById('overlay');
 let phrases = ['I love coding',
                'I am learning to code',
                'I am learning javascript',
@@ -16,13 +17,15 @@ const i = missed;
 //
 // }
 
-overlay.addEventListener('click',() => {
+startOverlay.addEventListener('click',() => {
   overlay.style.display = 'none';
 });
-
-// const getRandomPhraseAsArray = arr => {
-//
-// }
+// Get random Phrase array:
+const getRandomPhraseAsArray = arr => {
+  math.random(0, arraylength + 1);
+  phrases.length;
+}
+getRandomPhraseAsArray(phrases);
 //
 // const addPhraseToDisplay = arr => {
 //
