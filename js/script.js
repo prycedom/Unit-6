@@ -22,9 +22,8 @@ startOverlay.addEventListener('click',() => {
 });
 // Get random Phrase array:
 const getRandomPhraseAsArray = arr => {
-  var randomNumber =  Math.floor(Math.random() * phrases.length + 1);
-  randomNumber[i];
-
+  var randomNumber =  Math.floor(Math.random() * phrases.length);
+  return arr [randomNumber]
 }
 getRandomPhraseAsArray(phrases);
 
