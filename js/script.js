@@ -4,6 +4,7 @@ const keyboard = document.getElementById (qwerty);
 const newphrase = document.getElementById (phrase);
 const reset = document.getElementsByClassName ('.btn__reset');
 const startOverlay = document.getElementById('overlay');
+const b
 let phrases = ['I love coding',
                'I am learning to code',
                'I am learning javascript',
@@ -25,12 +26,13 @@ const getRandomPhraseAsArray = arr => {
   var randomNumber =  Math.floor(Math.random() * phrases.length);
   return arr [randomNumber]
 }
-console.log(getRandomPhraseAsArray(phrases));
+getRandomPhraseAsArray(phrases);
 
 // Checks to see if the letter is in this phrase:
-const checkLetter = button => {
 
-}
+const checkLetter = button.addEventListener('click',() => {
+  var liItems = phrase.ul
+});
 //
 // const addPhraseToDisplay = arr => {
 //
