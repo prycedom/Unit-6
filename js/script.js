@@ -25,7 +25,7 @@ const getRandomPhraseAsArray = arr => {
   var randomNumber =  Math.floor(Math.random() * phrases.length);
   return arr [randomNumber]
 }
-getRandomPhraseAsArray(phrases);
+console.log(getRandomPhraseAsArray(phrases));
 
 // Checks to see if the letter is in this phrase:
 const checkLetter = button => {
