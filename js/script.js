@@ -26,11 +26,10 @@ const getRandomPhraseAsArray = arr => {
   return arr [randomNumber]
 }
 getRandomPhraseAsArray(phrases);
-
 // Checks to see if the letter is in this phrase:
 
 const checkLetter = button => {
-  var liItems = phrase.ul
+
 }
 //
 // const addPhraseToDisplay = arr => {
