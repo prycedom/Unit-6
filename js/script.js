@@ -8,7 +8,7 @@ let phrases = ['I love coding',
                'I am learning to code',
                'I am learning javascript',
                'javascript is fun',
-               'Learning to code is fun']
+               'Learning to code is fun'];
 let missed = 0;
 
 startOverlay.addEventListener('click',() => {
@@ -16,19 +16,24 @@ startOverlay.addEventListener('click',() => {
 });
 // Get random Phrase array:
 const getRandomPhraseAsArray = arr => {
-  var randomNumber =  Math.floor(Math.random() * phrases.length);
-  return arr [randomNumber]
+  var randomNumber =  Math.floor(Math.random() * arr.length);
+  return arr[randomNumber].split('');
 }
 getRandomPhraseAsArray(phrases);
 
-function addPhraseToDisplay(arr){
-  var getLetter =  Math.floor(Math.random() * phrases.length);
-  var i;
-for (i = 0; i < phraseArray.length; i++) {
-  return phraseArray[i];
-}
-  return arr [getLetter]
-
+ const addPhraseToDisplay = arr => {
+   const ul = newphrase.getElementsByTagName('ul')[0];
+   for (let i = 0; i < arr.length; i++) {
+     const li = document.createElement('li');
+     if (arr[i] === ' ') {
+        li.classList.add('space');
+     }
+     else {
+       li.classList.add('letter');
+     }
+     li.append(arr[i]);
+     ul.append(li);
+  }
 }
 const phraseArray = getRandomPhraseAsArray(phrases);
 addPhraseToDisplay(phraseArray);
