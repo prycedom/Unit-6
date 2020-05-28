@@ -41,28 +41,26 @@ addPhraseToDisplay(phraseArray);
 // Checks to see if the letter is in this phrase:
 
 const checkLetter = button => {
-  checkLetter.addEventListner('click', () => {
-    var randomNumber =  Math.floor(Math.random() * phrases.length);
-    var liLetter = ['I love coding',
-                    'I am learning to code',
-                    'I am learning javascript',
-                    'javascript is fun',
-                    'Learning to code is fun']
-    var match = 0;
-    for (i = 0; i < phrases.length; i++) {
-        text += arr[liLetter];
-       if (true) {
-         return match;
-       }
-       else {
-
-       }
-    }
-    return arr [liLetter]
-  });
+  const letters = document.getElementsByClassName('letter');
+  let matchingLetter = null;
+  for (let i = 0; i < letters.length; i++) {
+  if (letters[i].innerHTML === button.innerHTML) {
+     letters[i].classList.add('show');
+     matchingLetter = letters[i];
+  }
+ }
+ return matchingLetter;
 }
 
+const keys = keyboard.getElementsByTagName('button');
+   for (var i = 0; i < keys.length; i++) {
+     keys[i].addEventListener('click', function() {
+       this.classList.add('chosen');
+       this.setAttribute('disabled', '');
+       const letterFound = checkLetter(this);
+     });
 
+   }
 //
 // const addPhraseToDisplay = arr => {
 //
