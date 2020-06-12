@@ -62,6 +62,7 @@ const keys = keyboard.getElementsByTagName('button');
 
    }
 //
+// }
 // const addPhraseToDisplay = arr => {
 //
 // }
@@ -73,6 +74,4 @@ const keys = keyboard.getElementsByTagName('button');
 //
 //
 //
-// qwerty.addEventListener('click', () => {
 //
-// }
