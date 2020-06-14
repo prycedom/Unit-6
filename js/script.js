@@ -8,7 +8,8 @@ const scoreboard = document.getElementById('#scoreboard');
 const tries = document.getElementsByClassName('tries');
 const showElements = document.getElementsByClassName('show');
 const letters = document.getElementsByClassName('letter');
-
+const title = document.getElementById('title');
+const btn__reset = document.getElementById('btn__reset');
 
 let phrases = ['I love coding',
                'I am learning to code',
@@ -79,10 +80,14 @@ const checkWin = () => {
    if (showElements.length === letters.length) {
        startOverlay.classList.add('win');
        startOverlay.style.display = 'flex';
+       title.innerHTML = 'YOU WIN!'
+       btn__reset.innerHTML = 'Play again'
 } else if (missed === 5) {
 
   startOverlay.classList.add('lose');
   startOverlay.style.display = 'flex';
+  title.innerHTML = 'YOU Lose!'
+  btn__reset.innerHTML = 'Try again'
   }
 }
 //
