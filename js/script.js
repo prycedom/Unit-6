@@ -5,8 +5,9 @@ const newphrase = document.getElementById('phrase');
 const reset = document.getElementsByClassName('.btn__reset');
 const startOverlay = document.getElementById('overlay');
 const scoreboard = document.getElementById('#scoreboard');
-const tries = document.getElementsByTagName('tries')
-
+const tries = document.getElementsByClassName('tries');
+const showElements = document.getElementsByClassName('show');
+const letters = document.getElementsByClassName('letter');
 
 
 let phrases = ['I love coding',
@@ -49,7 +50,7 @@ const checkLetter = button => {
   const letters = document.getElementsByClassName('letter');
   let matchingLetter = null;
   for (let i = 0; i < letters.length; i++) {
-  if (letters[i].innerHTML === button.innerHTML) {
+  if (letters[i].innerHTML.toLowerCase() === button.innerHTML.toLowerCase()) {
      letters[i].classList.add('show');
      matchingLetter = letters[i];
   }
@@ -64,17 +65,26 @@ const keys = keyboard.getElementsByTagName('button');
        this.setAttribute('disabled', '');
        const letterFound = checkLetter(this);
 
-       if (checkLetter === "$0") {
-          tries.style.display = "none";
+       if (letterFound === null) {
+          tries[missed].style.display = "none";
+          missed = missed +1;
        } else {
-          for (var i = 0; i < 5; i++) {
-            missed[i]
-          }
+
        }
+       checkWin();
      });
 }
 
+const checkWin = () => {
+   if (showElements.length === letters.length) {
+       startOverlay.classList.add('win');
+       startOverlay.style.display = 'flex';
+} else if (missed === 5) {
 
+  startOverlay.classList.add('lose');
+  startOverlay.style.display = 'flex';
+  }
+}
 //
 // }
 // const addPhraseToDisplay = arr => {
