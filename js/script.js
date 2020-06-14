@@ -27,10 +27,13 @@ startOverlay.addEventListener('click',() => {
      for (var i = 0; i < keys.length; i++) {
        keys[i].classList.remove('chosen');
        keys[i].disabled =  false;
+       startOverlay.classList.remove('win');
+       startOverlay.classList.remove('lose');
      }
      for (var i = 0; i < tries.length; i++) {
        tries[i].style.display = "inline-block";
      }
+
 });
 // Get random Phrase array:
 const getRandomPhraseAsArray = arr => {
