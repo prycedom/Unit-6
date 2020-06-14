@@ -20,16 +20,27 @@ let missed = 0;
 
 startOverlay.addEventListener('click',() => {
   overlay.style.display = 'none';
+  missed = 0
+  const phraseArray = getRandomPhraseAsArray(phrases);
+  addPhraseToDisplay(phraseArray);
+  const keys = keyboard.getElementsByTagName('button');
+     for (var i = 0; i < keys.length; i++) {
+       keys[i].classList.remove('chosen');
+       keys[i].disabled =  false;
+     }
+     for (var i = 0; i < tries.length; i++) {
+       tries[i].style.display = "inline-block";
+     }
 });
 // Get random Phrase array:
 const getRandomPhraseAsArray = arr => {
   var randomNumber =  Math.floor(Math.random() * arr.length);
   return arr[randomNumber].split('');
 }
-getRandomPhraseAsArray(phrases);
 
  const addPhraseToDisplay = arr => {
    const ul = newphrase.getElementsByTagName('ul')[0];
+   ul.innerHTML = "";
    for (let i = 0; i < arr.length; i++) {
      const li = document.createElement('li');
      if (arr[i] === ' ') {
@@ -42,8 +53,7 @@ getRandomPhraseAsArray(phrases);
      ul.append(li);
   }
 }
-const phraseArray = getRandomPhraseAsArray(phrases);
-addPhraseToDisplay(phraseArray);
+
 
 // Checks to see if the letter is in this phrase:
 
