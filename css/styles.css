@@ -95,6 +95,12 @@ button {
 .show {
   color: #000;
   background-color: #76CE82;
+  transition: transform 1s;
+}
+li.letter.show {
+   /* width: 65px;
+   height: 65px; */
+   transform: rotateX(360deg);
 }
 
 /* Keyboard */

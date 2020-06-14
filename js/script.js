@@ -4,6 +4,11 @@ const keyboard = document.getElementById('qwerty');
 const newphrase = document.getElementById('phrase');
 const reset = document.getElementsByClassName('.btn__reset');
 const startOverlay = document.getElementById('overlay');
+const scoreboard = document.getElementById('#scoreboard');
+const tries = document.getElementsByTagName('tries')
+
+
+
 let phrases = ['I love coding',
                'I am learning to code',
                'I am learning javascript',
@@ -58,9 +63,18 @@ const keys = keyboard.getElementsByTagName('button');
        this.classList.add('chosen');
        this.setAttribute('disabled', '');
        const letterFound = checkLetter(this);
-     });
 
-   }
+       if (checkLetter === "$0") {
+          tries.style.display = "none";
+       } else {
+          for (var i = 0; i < 5; i++) {
+            missed[i]
+          }
+       }
+     });
+}
+
+
 //
 // }
 // const addPhraseToDisplay = arr => {
